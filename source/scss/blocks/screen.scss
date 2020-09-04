@@ -354,3 +354,63 @@
 .screen--rules {
   background-color: $c-dark;
 }
+
+@keyframes uptext {
+
+  to {
+    transform: translate(0, 0px);
+    opacity: 1;
+  }
+
+  from {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
+
+.intro__message {
+  animation-name: uptext;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes uphistory {
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  from {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
+
+
+
+.slider__item-title {
+  animation-name: uphistory;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.slider__item.swiper-slide.swiper-slide-next .slider__item-text {
+  animation-name: uphistory;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.slider__item.swiper-slide.swiper-slide-active .slider__item-text {
+  animation-name: uphistory;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
