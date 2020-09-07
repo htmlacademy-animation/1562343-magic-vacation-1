@@ -356,15 +356,14 @@
 }
 
 @keyframes uptext {
+  from {
+    transform: translate(0, 1.8rem);
+    opacity: 0;
+  }
 
   to {
     transform: translate(0, 0px);
     opacity: 1;
-  }
-
-  from {
-    transform: translate(0, 20px);
-    opacity: 0;
   }
 }
 
@@ -378,14 +377,14 @@
 
 
 @keyframes uphistory {
+  from {
+    transform: translate(0, 1.8rem);
+    opacity: 0;
+  }
+
   to {
     transform: translate(0, 0);
     opacity: 1;
-  }
-
-  from {
-    transform: translate(0, 20px);
-    opacity: 0;
   }
 }
 
