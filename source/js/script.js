@@ -21,3 +21,11 @@ social();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+
+// new sctipt 0.7.09.2020
+
+window.onload = function () {
+  let bodyLoad = document.querySelector('body');
+  bodyLoad.classList.add("bodyLoaded");
+};
