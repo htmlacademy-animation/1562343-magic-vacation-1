@@ -327,3 +327,37 @@
 .social-block__list {
   transition: opacity 0.3s ease;
 }
+
+
+.page-header__logo,
+.page-header__nav,
+.screen__footer {
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0, 0, 0, 0.80);
+}
+
+.page-header__logo,
+.page-header__nav {
+  opacity: 0;
+}
+
+.page-header__logo {
+  transform: translate(-3rem, 0)
+}
+
+.bodyLoaded .page-header__logo {
+  opacity: 1;
+  transform: translate(0, 0)
+}
+
+.bodyLoaded .page-header__nav {
+  opacity: 1;
+}
+
+.screen__footer {
+  transform: translate(0, 3rem);
+}
+
+.bodyLoaded .screen__footer {
+  transform: translate(0, 0);
+}
