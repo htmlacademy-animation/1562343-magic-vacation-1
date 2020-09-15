@@ -32,3 +32,9 @@ window.onload = function () {
   let bodyLoad = document.querySelector('body');
   bodyLoad.classList.add("bodyLoaded");
 };
+
+
+const animated = document.querySelector('.rules__list :nth-child(4)');
+animated.addEventListener('animationend', () => {
+  document.querySelector('.rules__link').classList.add('acivated');
+});

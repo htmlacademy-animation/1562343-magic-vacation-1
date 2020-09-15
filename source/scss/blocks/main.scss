@@ -17,3 +17,137 @@
   z-index: 1;
   height: 100%;
 }
+
+// animation block 
+
+
+.rules__list .rules__item {
+  animation-name: showBlock;
+  animation-duration: 803ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 253ms;
+  animation-timing-function: ease;
+}
+
+.rules__list {
+  .rules__item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .rules__item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  .rules__item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+}
+
+
+.rules__item::before {
+  animation-name: circle;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.rules__list .rules__item:nth-child(2):before {
+  animation-duration: 1.2s;
+}
+
+.rules__list .rules__item:nth-child(3):before {
+  animation-duration: 1.5s;
+}
+
+.rules__list .rules__item:nth-child(4):before {
+  animation-duration: 1.8s;
+}
+
+.rules__item:nth-child(1) p {
+  animation-name: paragraph;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.01, 0, 0.97);
+}
+
+.rules__item:nth-child(2) p {
+  animation-name: paragraph;
+  animation-duration: 1239ms;
+  animation-timing-function: cubic-bezier(0, 0.01, 0, 0.97);
+}
+
+.rules__item:nth-child(3) p {
+  animation-name: paragraph;
+  animation-duration: 1899ms;
+  animation-timing-function: cubic-bezier(0, 0.01, 0, 0.97);
+}
+
+.rules__item:nth-child(4) p {
+  animation-name: paragraph;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0, 0.01, 0, 0.97);
+}
+
+
+@keyframes paragraph {
+  from {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+
+@keyframes circle {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes showBlock {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.rules__link {
+  opacity: 0;
+}
+
+.rules__link.acivated {
+  animation-name: rulesLink;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+
+@keyframes rulesLink {
+  from {
+    opacity: 0;
+    padding: 1.5rem 0;
+  }
+
+  to {
+    opacity: 1;
+    padding: 1.5rem 2.9rem;
+  }
+}
