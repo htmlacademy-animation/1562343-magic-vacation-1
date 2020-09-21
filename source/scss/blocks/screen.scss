@@ -413,3 +413,26 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
+
+
+.text__word {
+  display: inline-block;
+  margin: 0 5px;
+  overflow: hidden;
+}
+
+.text__word>span {
+  transform: translate3d(0, 120%, 0);
+  display: inline-block;
+}
+
+.active-text .text__word>span {
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+.intro__date>span {
+  line-height: 1;
+  letter-spacing: normal;
+}
