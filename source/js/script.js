@@ -8,9 +8,13 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+import TypographyTextBuild from './modules/animatedtext';
 import {
   cloneUniforms
 } from 'three';
+import {
+  wrap
+} from 'lodash';
 
 // init modules
 mobileHeight();
@@ -28,7 +32,25 @@ fullPageScroll.init();
 
 // new sctipt 0.7.09.2020
 
+
+const animtext = new TypographyTextBuild(`.intro__title`, 600, `active-text`, `transform`);
+const animtext2 = new TypographyTextBuild(`.intro__date`, 400, `active-text`, `transform`);
+
+
+
+
+
+
+
+
 window.onload = function () {
+  animtext.runAnimation();
+  setTimeout(() => {
+    animtext2.runAnimation();
+  }, 800);
+
+
+
   let bodyLoad = document.querySelector('body');
   bodyLoad.classList.add("bodyLoaded");
 };
