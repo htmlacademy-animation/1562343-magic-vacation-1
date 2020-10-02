@@ -436,3 +436,70 @@
   line-height: 1;
   letter-spacing: normal;
 }
+
+
+// animation button slider
+
+
+.screen--story.js-scrollspy.active .slider__pagination.swiper-pagination {
+  animation-name: countelement;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+
+@keyframes countelement {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.slider__control--prev {
+  animation-delay: 1s;
+  animation-name: rotateBtnRight;
+
+}
+
+.slider__control--next {
+  animation-delay: 1s;
+  animation-name: rotateBtnLeft;
+}
+
+.slider__control--prev,
+.slider__control--next {
+  visibility: hidden;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0, 1.55);
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes rotateBtnRight {
+  from {
+    opacity: 0;
+    transform: translateX(-65px) rotate(-140deg);
+  }
+
+  to {
+    visibility: visible;
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes rotateBtnLeft {
+  from {
+    opacity: 0;
+    transform: translateX(60px) rotate(135deg);
+  }
+
+  to {
+    visibility: visible;
+    transform: translateX(0) rotate(0);
+  }
+}

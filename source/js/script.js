@@ -13,6 +13,7 @@ import {
   cloneUniforms
 } from 'three';
 import {
+  forEach,
   wrap
 } from 'lodash';
 
